@@ -3,7 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'hello from jenkins file'
+                echo 'hello from jenkins file build stage'
+            }
+            stage('test') {
+            steps {
+                echo 'hello from jenkins file test stage'
+            }
+                stage('deploy') {
+            steps {
+                echo 'hello from jenkins file deploy stage'
             }
         }
     }
